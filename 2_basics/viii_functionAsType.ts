@@ -22,5 +22,5 @@ clone = _func2 //the problem here is that this function has 2 params and previou
 /////////////// BETTER APPROACH ///////////
 //////////////////////////////////////////
 
-let _clone: (a: number) => number = func;
+let _clone: (a: number) => number = func
 // _clone = _func2  // this assignment will give us error this time
