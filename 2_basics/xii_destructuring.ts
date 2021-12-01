@@ -31,3 +31,10 @@ console.log(rainForests) // ["Cerrado, "Congo"]
 const _rainForests = ["Amazon", "Borneo", "Cerrado", "Congo"]
 console.log(_rainForests.slice(0, 2)) // ["Amazon", "Borneo"]
 console.log(_rainForests) // ["Amazon", "Borneo","Cerrado, "Congo"]
+
+//////////////////////////////////////////////////////////////////
+////// Difference b/w spread Operator & Rest Parameter //////////
+////////////////////////////////////////////////////////////////
+
+// Rest Parameter let us pass an indefinite amount of parameters to a function and access them in an array
+// Spread operator lets us spread the values of array or any other iterator accross zero or more args in a function or element in an array or other iterable
