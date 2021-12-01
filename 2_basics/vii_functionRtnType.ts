@@ -1,5 +1,5 @@
-// undefined is a return type in javascript
-// you can initialize a variable with type undefined but you can't return it as return type of function in typescript
+// undefined is a type in javascript
+// you can declare a variable with type undefined but you can't return it as return type of function in typescript
 
 let func = (): void => {
   console.log("I am being executed")

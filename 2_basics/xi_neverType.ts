@@ -1,6 +1,6 @@
-// never is another type that functions can't return like undefined
+// never is another type that functions don't return like undefined, they usually show void even though if function never returns anything
 // forexample: a function that never stops running, like while true, it doesn't ever return anything.
-// another example is for the erros, which will cause the application to crash, for such functions, the rtn type is also never
+// another example is for the errors, which will cause the application to crash, for such functions, the rtn type is also never
 
 
 // lets build a utility function that returns an error

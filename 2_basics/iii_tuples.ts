@@ -16,7 +16,7 @@ let _val: [number, number] = tuple1[2]
 let string_al: string = tuple1[0]
 
 // why make tuples? grouping together values of different types together to make it immutable and memory efficient
-// in javascript, we acheive it by destructuring array and pretend for it exist
+// in javascript, we acheive it by destructuring array and pretend for it to exist
 
 
 // you could do the following as well
