@@ -61,7 +61,7 @@ We can set our javascript version in target based on the version of javascript w
 
 SUMMARY =====> if lib is not not set then some defaults are set that are typically needed to be run on browser
 
-Following is set as by default if you set your target: "ES6"
+Following are set as by default if you set your target: "ES6"
 
 "lib": [
   "DOM",
@@ -69,4 +69,38 @@ Following is set as by default if you set your target: "ES6"
   "ES6",
   "ScriptHost"
 ], 
+
+
+/////////////////////////////////////////////////////////////
+////////////////////// Source Maps /////////////////////////
+///////////////////////////////////////////////////////////
+
+What if we wanted to debug our typescript code instead of our compiled js code in chromes' sources tab that exists in inspect
+=> We could turn on sourceMap Option in compiler Options
+=> Turning it on makes Typescript files visible in that specific tab
+=> Turning it on makes .js.maps files appear in our directory what these files do is act as a bridge which is understood by modern      browsers' dev tools
+=> We can now see .ts files in sources section of browser and we could debug our ts files from there by applying breakpoints
+
+
+
+//////////////////////////////////////////////////////////
+/////////////////// outDir & rootDir ////////////////////
+////////////////////////////////////////////////////////
+
+=> outDir declares where you js files will be placed after compilation
+=> If you want to only include files in your src file then you could use rootDir
+=> You could use include for this purpose as well but using rootDir will also maintain your project folder structure as well
+=> If you want to make files shorter then you could use removeComments: true 
+=> If you wanted to check if your all typescript files are correct, then you could use noEmit: true to save time
+
+
+//////////////////////////////////////////////////////////
+////////////////////// noEmitOnError ////////////////////
+////////////////////////////////////////////////////////
+
+=> Setting noEmitOnError: true will not generate js files if any error occurs and vice versa
+=> Setting to true will make problematic files not be generated
+=> If any of file has error, then nothing will be compiled to js 
+
+//////////////////////////////////////////////////////////
 

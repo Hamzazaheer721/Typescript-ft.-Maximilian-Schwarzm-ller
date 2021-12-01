@@ -1,4 +1,4 @@
-console.log("Server is running!")
+console.log("App is running!")
 
 let button = document.querySelector("button")!
 
