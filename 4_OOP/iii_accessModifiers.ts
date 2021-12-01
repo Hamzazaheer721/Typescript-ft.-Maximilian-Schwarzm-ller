@@ -1,6 +1,6 @@
 class Department {
   public name: string
-  private employees: string[] = [] // can only be accessed from setter getters or any public method 
+  private employees: string[] = [] // can only be accessed from setter getters or any public method
   private employee_count: number = 0
 
   constructor(_name: string) {
@@ -30,12 +30,13 @@ class Department {
     console.log(`Employee count: ${this.employee_count}`)
   }
 
-  get allAttributes() { // can't set this: Department here
+  get allAttributes() {
+    // can't set this: Department here
     return {
       name: this.name,
       employees: this.employees,
       employee_count: this.employee_count
-    } 
+    }
   }
 
   set addOneEmployee(_emp: string) {
@@ -50,7 +51,7 @@ department.printInfo()
 department.getEmployeeCount()
 let _attributes = department.allAttributes
 
-console.log(_attributes)  // { name : "BBA", employees: {"Hamza"}, employee_count: 1}
+console.log(_attributes) // { name : "BBA", employees: {"Hamza"}, employee_count: 1}
 
 department.addEmployees("Zubair")
 department.printInfo() // Number of employees: 2 , Employees: ["Hamza", "Zubair"]
