@@ -102,5 +102,9 @@ What if we wanted to debug our typescript code instead of our compiled js code i
 => Setting to true will make problematic files not be generated
 => If any of file has error, then nothing will be compiled to js 
 
-//////////////////////////////////////////////////////////
 
+//////////////////////////////////////////////////////////
+/////////////////// Code Quality ////////////////////////
+////////////////////////////////////////////////////////
+
+=> noUnusedLocals, noUnusedparameters, noImplicitReturns, noFallthroughCasesInSwitch
