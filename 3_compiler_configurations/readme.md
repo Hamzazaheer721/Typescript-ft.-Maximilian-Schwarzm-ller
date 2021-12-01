@@ -105,3 +105,12 @@ What if we wanted to debug our typescript code instead of our compiled js code i
 ////////////////////////////////
 
 => noUnusedLocals, noUnusedparameters, noImplicitReturns, noFallthroughCasesInSwitch
+
+
+////////////////////////////
+/////// DEBUGGER //////////
+//////////////////////////
+
+=> install Chrome Debugger 
+=> Start Debugging from vscode and set the localhost
+=> Now Turn on the sourceMap: true in tsConfig

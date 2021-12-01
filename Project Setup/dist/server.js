@@ -15,3 +15,4 @@ const handleChange = (params) => (e) => {
     window.alert("Button has been pressed");
 };
 button.addEventListener("click", handleChange("Hey, Hamza!"));
+//# sourceMappingURL=server.js.map
