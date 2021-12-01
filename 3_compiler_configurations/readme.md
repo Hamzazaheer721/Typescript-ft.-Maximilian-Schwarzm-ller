@@ -49,7 +49,6 @@ there is another option files which works like include but you can't specify who
 //////// COMPILER OPTIONS /////////
 //////////////////////////////////
 
-
 One of the most interesting options in tsconfig is compilerOptions
 We can set our javascript version in target based on the version of javascript which we want to use
 
@@ -71,9 +70,9 @@ Following are set as by default if you set your target: "ES6"
 ], 
 
 
-/////////////////////////////////////////////////////////////
-////////////////////// Source Maps /////////////////////////
-///////////////////////////////////////////////////////////
+////////////////////////////////////
+///////// Source Maps /////////////
+//////////////////////////////////
 
 What if we wanted to debug our typescript code instead of our compiled js code in chromes' sources tab that exists in inspect
 => We could turn on sourceMap Option in compiler Options
@@ -81,11 +80,9 @@ What if we wanted to debug our typescript code instead of our compiled js code i
 => Turning it on makes .js.maps files appear in our directory what these files do is act as a bridge which is understood by modern      browsers' dev tools
 => We can now see .ts files in sources section of browser and we could debug our ts files from there by applying breakpoints
 
-
-
-//////////////////////////////////////////////////////////
-/////////////////// outDir & rootDir ////////////////////
-////////////////////////////////////////////////////////
+////////////////////////////////////
+/////// outDir & rootDir //////////
+//////////////////////////////////
 
 => outDir declares where you js files will be placed after compilation
 => If you want to only include files in your src file then you could use rootDir
@@ -94,17 +91,17 @@ What if we wanted to debug our typescript code instead of our compiled js code i
 => If you wanted to check if your all typescript files are correct, then you could use noEmit: true to save time
 
 
-//////////////////////////////////////////////////////////
-////////////////////// noEmitOnError ////////////////////
-////////////////////////////////////////////////////////
+//////////////////////////////////
+/////////// noEmitOnError ///////
+////////////////////////////////
 
 => Setting noEmitOnError: true will not generate js files if any error occurs and vice versa
 => Setting to true will make problematic files not be generated
 => If any of file has error, then nothing will be compiled to js 
 
 
-//////////////////////////////////////////////////////////
-/////////////////// Code Quality ////////////////////////
-////////////////////////////////////////////////////////
+//////////////////////////////////
+/////////// Code Quality ////////
+////////////////////////////////
 
 => noUnusedLocals, noUnusedparameters, noImplicitReturns, noFallthroughCasesInSwitch
