@@ -1,1 +1,2 @@
-console.log("Server is running!")
+"use strict";
+console.log("Server is running!");
