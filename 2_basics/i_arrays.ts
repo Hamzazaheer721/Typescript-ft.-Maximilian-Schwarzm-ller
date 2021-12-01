@@ -54,3 +54,37 @@ const _combine = Object.assign(hobbiesObj,activeHobbiesObj)
 console.log(_combine)
 
 // {coding: "CODING", gaming: "GAMING", hiking: "HIKING" }
+
+const copyingPointer = _combine; 
+
+const newObjWithCopiedValues = {..._combine}
+
+
+
+////////////////////////////////////
+////////// Rest Parameter /////////
+//////////////////////////////////
+
+const genericSum = (...numbers: number[]) => {
+  return numbers.reduce((_res, _val)=> _res + _val ,0)
+}
+
+const specificTuppleSum = (...numbers: [number, number, number]) => {
+  return numbers.reduce((_res, _val) => _res + _val, 0)
+}
+
+let addedNumbers = genericSum(4,55,12,4.5,5)
+console.log(addedNumbers) //80.5
+
+addedNumbers = specificTuppleSum(4,2,1)
+console.log(addedNumbers) // 7
+
+
+// lets assume another example
+
+const _genericSumWithSpread = (val1: number, val2: number, val3: number) => {
+  return val1 + val2 + val3
+}
+
+let arr: [number, number, number] = [2,3,4]
+addedNumbers = _genericSumWithSpread(...arr)
