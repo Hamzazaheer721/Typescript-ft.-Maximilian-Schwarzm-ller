@@ -31,3 +31,26 @@ for (let k of _obj){
 // for...of gives value of iterable object like string and arrays
 // for...of will loop over all type of data that is iterable 
 
+// arrays are objects and objects are reference values and when we push into arrays, we are changing the memory values not memory addresses
+
+const hobbies = ["Coding", "Gaming"]
+const activeHobbies = ["Hiking"]
+
+activeHobbies.push(...hobbies)
+console.log(activeHobbies)
+// ["Hiking", "Coding", "Gaming"]
+
+const hobbiesObj = {
+  coding: "CODING",
+  gaming: "GAMING"
+}
+
+const activeHobbiesObj = {
+  hiking: "HIKING"
+}
+
+const _combine = Object.assign(hobbiesObj,activeHobbiesObj)
+
+console.log(_combine)
+
+// {coding: "CODING", gaming: "GAMING", hiking: "HIKING" }
