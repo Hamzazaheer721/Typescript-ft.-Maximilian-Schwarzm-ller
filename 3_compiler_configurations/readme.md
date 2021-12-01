@@ -42,3 +42,31 @@ adding one file in include won't force the recompilation on other files
 So basically it becomes Include - exclude = files to be compiled
 
 there is another option files which works like include but you can't specify whole folders in here
+
+
+
+////////////////////////////////////
+//////// COMPILER OPTIONS /////////
+//////////////////////////////////
+
+
+One of the most interesting options in tsconfig is compilerOptions
+We can set our javascript version in target based on the version of javascript which we want to use
+
+==> There is another Option of lib : []
+==> If we keep it as it is then everything that target: "es6", javascript targetted version has will be accessible in our project
+==> Even dom and everything will become available
+==> if enable the lib: [] and use it then we will get error on using dom and now we will have to specifically mention that we want to use dom
+
+
+SUMMARY =====> if lib is not not set then some defaults are set that are typically needed to be run on browser
+
+Following is set as by default if you set your target: "ES6"
+
+"lib": [
+  "DOM",
+  "DOM.Iterable",
+  "ES6",
+  "ScriptHost"
+], 
+
