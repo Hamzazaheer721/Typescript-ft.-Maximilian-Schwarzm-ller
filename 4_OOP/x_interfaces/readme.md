@@ -10,8 +10,8 @@ Interfaces and types are not exactly the same although you could use them for sa
 ==> Class implementing any specific interface will have to atleast follow all the properties and methods of interface
 ==> It's a bit like abstract classes but difference here is that you don't have implementation details
 
+==> intefaces could be used as function types.
 ==> While using interfaces with classes, we want class to have whatever is implemented into interfaces.
 ==> We could use Readonly property in interfaces. which suggests that the following property in interface could be given value once
 
-==> We could also extend intefaces like as follows: 
-                  interface interfaceName extends IntefaceName
+==> We could also extend intefaces like as follows: interface interfaceName extends IntefaceName
