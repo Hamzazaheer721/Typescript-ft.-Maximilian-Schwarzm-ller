@@ -26,7 +26,8 @@ class ITDepartment extends Department {
   }
 
   static addStaticEmployee(name: string) {
-    ITDepartment.staticEmployees.push(name)
+    // you can either use this.staticEmployees or ITDepartment.staticEmployees inside the class
+    this.staticEmployees.push(name) 
     return {
       name: ITDepartment.staticEmployees
     }
@@ -60,10 +61,10 @@ const year = ITDepartment.fiscalYear
 console.log(employee) // {name: "Hamza"}
 console.log(year) // 2022
 
-ITDepartment.addStaticEmployee("Aleen")  // Aleen will be added to the static property of the class permanently from now on
+ITDepartment.addStaticEmployee("Aleen") // Aleen will be added to the static property of the class permanently from now on
 const _emp = ITDepartment.staticEmployees
-console.log(_emp)  // ["Hamza", "Aleen"]
+console.log(_emp) // ["Hamza", "Aleen"]
 
-ITDepartment.fiscalYear = 2023; // fiscal date has been changed as well forever from now on
+ITDepartment.fiscalYear = 2023 // fiscal date has been changed as well forever from now on
 const _dept = new ITDepartment(23, ["Raheem", "Ahmad", "Abdullah"])
 _dept.printClassInformation()
