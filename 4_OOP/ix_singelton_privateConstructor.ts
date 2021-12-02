@@ -3,7 +3,7 @@
 // This is usually implemented by singleton pattern
 // We won't be able to instantiate this class from outside since our constructor will be private in this case
 // How do we make object of a class which can't be instantiated?
-// Solution: make private static property of class type and then make static method to instantiate it for only once 
+// Solution: make private static property of class type and then make static method to instantiate it for only once
 // This lets you instantiate the class from within the class
 
 abstract class Department {
@@ -21,7 +21,7 @@ class ITDepartment extends Department {
   static createInstance(_loc: string, _prin: string) {
     if (this.instance) return this.instance
     // Note, we are calling constructor from within the class with help of static method like as follows
-    ITDepartment.instance = new ITDepartment(_loc, _prin) 
+    ITDepartment.instance = new ITDepartment(_loc, _prin)
     return this.instance
   }
   describe(this: ITDepartment) {
@@ -30,15 +30,21 @@ class ITDepartment extends Department {
   }
 }
 
-const itDeptObj = ITDepartment.createInstance("Park Road, Islamabad", "Hamza Zaheer")
+const itDeptObj = ITDepartment.createInstance(
+  "Park Road, Islamabad",
+  "Hamza Zaheer"
+)
 
 // now this itDeptObj can access all the properties and methods of ITDepartment class and its parent class
 itDeptObj.describe()
 
-const itDeptObj_2 = ITDepartment.createInstance("Ahamadabad, India", "Suresh Patil")
+const itDeptObj_2 = ITDepartment.createInstance(
+  "Ahamadabad, India",
+  "Suresh Patil"
+)
 
-if(itDeptObj === itDeptObj_2){
-  console.log("I will always be executed since both variables are equal") 
-}else{
+if (itDeptObj === itDeptObj_2) {
+  console.log("I will always be executed since both variables are equal")
+} else {
   console.log("I won't be executed")
 }
