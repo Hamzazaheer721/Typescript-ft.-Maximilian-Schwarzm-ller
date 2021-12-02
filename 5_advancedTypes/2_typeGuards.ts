@@ -20,13 +20,12 @@ interface ICar {
   name: string
   tires: number
 }
-
 type IPlane = {
   name: string
   wings: number
 }
-
 type Combined = ICar | IPlane
+
 const _plane: IPlane = {
   name: "Airbus",
   wings: 2
@@ -82,7 +81,7 @@ let generate = (_livingBeing: _Combined) => {
   if ("getBreed" in _livingBeing) {
     //since classes are technically objects
     _livingBeing.getBreed()
-  } else if (_livingBeing instanceof Person) {
+  } else if (_livingBeing instanceof Person) { // this works here but not in interfaces because interfaces are not compiled to javascript code but class are compiled
     _livingBeing.getInfo()
   }
 }
