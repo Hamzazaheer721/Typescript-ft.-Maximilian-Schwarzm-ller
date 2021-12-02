@@ -1,6 +1,6 @@
 // tuples are a sort of list that can store limited set of items
 // In js, the tuples are created using arrays
-// you create tuples using [type, type, type] syntaxt
+// you create tuples using [type, type, type] syntax
 
 const tuple1: [string, number, [number, number]] = ["hamza", 25, [53, 63]]
 
