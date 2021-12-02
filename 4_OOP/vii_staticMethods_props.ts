@@ -1,8 +1,8 @@
 // static methods are the methods which we directly called on the class without new Keyword
-// we basically use Class as grouping mechacnism
+// we basically use Class as grouping mechanism
 // static allows us to add methods and properties to the class, and are not accessed on instance of the class i.e., objects
 // so You don't need to call "new" keyword
-// "this" refers to the instance based on the class so you can't use this keyword with static
+// "this" refers to the instance based on the class so you can't use this keyword with static outside of class.
 // the whole idea behind "static" itself is to be detached from instance of that class
 // e.g Math.pow() here we are using methods directly on Math class, not on istance of Math (object) which is created with new Math()
 // So Math acts as namespace for grouping mechanism

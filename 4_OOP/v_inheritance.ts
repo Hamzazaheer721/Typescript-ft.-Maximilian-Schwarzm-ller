@@ -21,7 +21,7 @@ const itDept = new ITDepartment(["Hamza"]) // it now is pointing to the construc
 //////////////////////////////
 
 class AccountingDepartment extends Department {
-  // it has access to all the methods and variables of its parent class now except the private methods and private properties of parents
+  // this class has access to all the methods and variables of its parent class now except the private methods and private properties of parents
   // to make private properties accessible in child classes, you will have to make them protected 
   constructor(_emp: string[], private reports: string[]) {
     super(_emp)

@@ -63,5 +63,3 @@ console.log(aiDept.getLocation) // Lahore
 
 // console.log(aiDept.setLocation("Islamabad")) // we can't access it like method, we have to access setters, getters as property
 aiDept.setLocation = "" // Please enter a Location !!!
-
-
