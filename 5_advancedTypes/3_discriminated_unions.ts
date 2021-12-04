@@ -34,5 +34,4 @@ const moveAnimal = (animal: Animal) => {
       return 0
   }
 }
-
 console.log(moveAnimal(_bird)) // 46
