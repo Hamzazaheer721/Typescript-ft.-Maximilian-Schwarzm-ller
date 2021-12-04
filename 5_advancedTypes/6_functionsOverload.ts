@@ -23,7 +23,7 @@ console.log(_res) // 3
 
 const _res2 = add("Hamza", 1) as string
 // the problem without typecasting is that we won't be able to use split and other string operations on it since typescript is perceiving it as result of type Combinable
-console.log(_res2.toLowerCase())//hamza1 // now you can use it after type casting 
+console.log(_res2.toLowerCase()) //hamza1 // now you can use it after type casting 
 
 // What could be potential Solution for it ?  function overloading !! 
 // lets redefine our function like as follows
