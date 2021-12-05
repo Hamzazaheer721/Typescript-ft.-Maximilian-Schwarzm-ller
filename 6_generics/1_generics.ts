@@ -60,7 +60,9 @@ let resObj_ = func_({ name: "Zaheer", age: 23 }, { city: "Lahore" })
 console.log(resObj_) // works as expected
 resObj_.city = "Islamabad" // works
 
-///////////// NOTE ///////////////
+///////////////////
+///// NOTE ///////
+/////////////////
 
 // We could write it like as follows
 let resObjCopy_ = func_<
