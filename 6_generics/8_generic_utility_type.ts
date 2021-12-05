@@ -1,4 +1,3 @@
-
 interface CourseGoal {
   title: string
   description: string
