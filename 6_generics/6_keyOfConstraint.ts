@@ -9,3 +9,4 @@ const extractAndConvert = <T extends object, U extends keyof T>(
 
 const _obj: {name?: string} = {}
 console.log(extractAndConvert(_obj, "name")) // undefined // we get undefined no error 
+
