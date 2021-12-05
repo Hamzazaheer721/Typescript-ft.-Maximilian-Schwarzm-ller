@@ -31,5 +31,3 @@ const makeFullName =  <T extends IObjType>(_obj:T ) => { //T should have atleast
 // const _obj = makeFullName(obj_)
 const __obj = makeFullName({firstName: "hamza", lastName: "zaheer", age: 25}) 
 console.log(__obj)
-
- 
