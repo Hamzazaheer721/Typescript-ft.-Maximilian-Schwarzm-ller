@@ -37,7 +37,6 @@ const _func = (_obj1: object, _obj2: object) => {
 }
 
 let _resObj = _func({ name: "hamza" }, { age: 23 })
-
 // Works fine?
 // Now the problem lies when we try to mutate the object!
 // _resObj.name // name doesn't exist on type object, this is because typescript doesn't know the exact type of the object
