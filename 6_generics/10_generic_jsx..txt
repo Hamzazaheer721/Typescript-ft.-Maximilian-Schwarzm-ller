@@ -1,3 +1,4 @@
 Open the following link to see the results
 
 https://codesandbox.io/s/generic-tsx-clsuz
+https://codesandbox.io/s/generic-component-2-bbc59?file=/src/types.ts
