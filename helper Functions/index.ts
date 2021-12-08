@@ -43,11 +43,11 @@ const deepCopy = <T extends object>(obj: T): T => {
 const _deepClone = <T extends object>(obj: T): T => {
   const _copy: unknown = {}
   for (let key in obj) {
-    let _obj = obj[key] as unknown;
+    let _obj = obj[key] as unknown
     if (typeof _obj === "object" && _obj !== null) {
       _copy[key] = _deepClone(_obj)
     }
-    _copy[key] = obj[key];
+    _copy[key] = obj[key]
   }
   return _copy as T
 }
@@ -61,16 +61,16 @@ console.log(_deepClone({ name: "Hamza", age: 21, e: { name: "ad" } }))
 
 const mergeArrays = <T>(...arrays: Array<T>[]): Array<T> => {
   const _arr: T[] = []
-  for(let array of arrays){
+  for (let array of arrays) {
     _arr.push(...array)
   }
   return _arr
 }
 
-const _array1 = [1,2,3,4]
-const _array2 = [5,6,7,8]
-const _array3 = [9,10]
-const _array4 = [11,12,13]
+const _array1 = [1, 2, 3, 4]
+const _array2 = [5, 6, 7, 8]
+const _array3 = [9, 10]
+const _array4 = [11, 12, 13]
 
 const _mergedArrays = mergeArrays<number>(_array1, _array2, _array3, _array4)
 
@@ -82,10 +82,10 @@ console.log(_mergedArrays)
 
 const _mergeWithReduce = <T>(...array: Array<T>[]): Array<T> => {
   return array.reduce((prev, curr) => {
-    let _arr: Array<T> = prev;
+    let _arr: Array<T> = prev
     _arr.push(...curr)
     return _arr
-  },array[0]) as Array<T>
+  }, array[0]) as Array<T>
 }
 
 console.log(_mergeWithReduce<number>(_array1, _array2, _array3, _array4))
