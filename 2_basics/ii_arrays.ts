@@ -8,4 +8,3 @@ const person = {
 for (let hobby of person.hobbies){
   console.log(hobby.toUpperCase()) //SPORTS, COOKING
 }
-

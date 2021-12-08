@@ -47,7 +47,6 @@ console.log(res_) // [true, false] //deletes the false that it finds in array
 /////////////// Check if Object is Empty /////////////////
 /////////////////////////////////////////////////////////
 
-
 const isObjectEmpty = <T extends object> (_obj: T): boolean => {
   const _res = true;
   for (let key in _obj){
@@ -73,6 +72,5 @@ const getFirstKey = <T extends object>(_obj: T): string=> {
   }
   return key
 }
-
 
 console.log(getFirstKey({name: "Azam", age: 32})) // name
