@@ -1,4 +1,3 @@
-
 ////////////////////////////////////////////////
 ////////////// Ways to copy Object ////////////
 //////////////////////////////////////////////
@@ -34,9 +33,8 @@ const shallowCopy = <T extends object>(obj: T): T => {
     return {... obj}
 }
 
-
 /////////////////// Deeep Copy Method //////////////////////////
 
-const deepCopy = <T extends object>(obj: T) => {
+const deepCopy = <T extends object>(obj: T): T => {
   return JSON.parse(JSON.stringify(obj))
 }
