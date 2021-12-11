@@ -1,7 +1,7 @@
 // suppose we want to constraint our generic types to objects/ strings/ numbers ?
-// we could work around liek this 
+// we could work around like this 
 
-const func_ = <T extends string | number,U extends string | number> (a: T, b: U) {
+const func_ = <T extends string | number, U extends string | number> (a: T, b: U) {
   if(typeof a === "string" || typeof b === "string"){
     return String(a) + String(b)
   }

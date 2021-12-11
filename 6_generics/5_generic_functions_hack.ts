@@ -6,15 +6,15 @@ interface Lengthy {
   length: number
 }
 
-const _func = <T extends Lengthy> (a: T) : [T | T[], string] => {
+const _func = <T extends Lengthy>(a: T): [T | T[], string] => {
   let description = "Nothing in the string rn"
-  if(a.length === 1) {
+  if (a.length === 1) {
     description = "There is one element in the string rn"
   }
-  if(a.length > 1){
+  if (a.length > 1) {
     description = "There are more than one element in the string rn"
   }
   return [a, description]
-} 
+}
 
-console.log(_func("hey")) // hey
+console.log(_func("hey")) // [ 'hey', 'There are more than one element in the string rn' ]
