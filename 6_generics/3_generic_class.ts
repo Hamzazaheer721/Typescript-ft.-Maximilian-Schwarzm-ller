@@ -1,6 +1,6 @@
 class Person<T, U> {
   constructor(public name: T, private age: U) {}
-  add: (x: T, y: U) => T 
+  add: (x: T, y: U) => T
 }
 
 const person = new Person("Hamza", 42)
