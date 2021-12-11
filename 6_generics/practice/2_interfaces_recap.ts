@@ -3,11 +3,8 @@
 ///////////////////////////////////////////////////////////////////
 
 const rtnObjWithRemovedLastKey = <T extends object>(obj: T): T => {
-  let _keysArray = Object.keys(obj)
-  let lastIndexedKey = _keysArray[_keysArray.length - 1]
-  for (let key in obj) {
-    if (key === lastIndexedKey) delete obj[key]
-  }
+  let _keysArray = Object.keys(obj) as Array<keyof T>
+  delete obj[_keysArray[_keysArray.length - 1]]
   return obj
 }
 
