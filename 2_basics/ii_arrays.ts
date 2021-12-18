@@ -4,7 +4,6 @@ const person = {
   hobbies: ["Sports", "Cooking"]
 }
 
-
-for (let hobby of person.hobbies){
+for (let hobby of person.hobbies) {
   console.log(hobby.toUpperCase()) //SPORTS, COOKING
 }
