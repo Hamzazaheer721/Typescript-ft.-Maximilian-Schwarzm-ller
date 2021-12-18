@@ -35,7 +35,6 @@ console.log(_rainForests.slice(1)) // [ 'Borneo', 'Cerrado', 'Congo' ]
 console.log(_rainForests.slice(1, 2)) // ['Borneo']
 console.log(_rainForests.slice(2, 2)) // []
 console.log(_rainForests.slice(2, 3)) // ["Cerrado"]
-
 console.log(_rainForests.slice(0, 2)) // ["Amazon", "Borneo"]
 console.log(_rainForests) // ["Amazon", "Borneo","Cerrado, "Congo"]
 

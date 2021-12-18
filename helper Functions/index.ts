@@ -85,7 +85,7 @@ const _mergeWithReduce = <T>(...array: Array<T>[]): Array<T> => {
     let _arr: Array<T> = prev
     _arr.push(...curr)
     return _arr
-  }, array[0]) as Array<T>
+  }, []) as Array<T>
 }
 
 console.log(_mergeWithReduce<number>(_array1, _array2, _array3, _array4))
