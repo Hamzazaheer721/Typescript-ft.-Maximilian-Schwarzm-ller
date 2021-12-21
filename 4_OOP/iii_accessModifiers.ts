@@ -45,13 +45,13 @@ class Department {
   }
 }
 
-const department = new Department("BBA")
-department.addEmployees("Hamza")
+const department = new Department('BBA')
+department.addEmployees('Hamza')
 department.printInfo()
 department.getEmployeeCount()
 let _attributes = department.allAttributes
 
 console.log(_attributes) // { name : "BBA", employees: {"Hamza"}, employee_count: 1}
 
-department.addEmployees("Zubair")
+department.addEmployees('Zubair')
 department.printInfo() // Number of employees: 2 , Employees: ["Hamza", "Zubair"]
