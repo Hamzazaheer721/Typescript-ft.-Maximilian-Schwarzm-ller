@@ -4,10 +4,6 @@ enum IActionString {
   ERROR = 'ERROR'
 }
 
-const handleSuccess = () => console.log('SUCCESS')
-const handleError = () => console.log('ERROR')
-const handleLoading = () => console.log('LOADING !!')
-
 let filterMethod = (status: string): IActionString => {
   status = status.toUpperCase().trim()
   switch (status) {
@@ -21,8 +17,6 @@ let filterMethod = (status: string): IActionString => {
       return
   }
 }
-
-console.log(filterMethod('loading')) // LOADING
 
 // Now lets see another trick
 enum IActionNumber {
@@ -40,27 +34,29 @@ enum IActionNumber {
 
 console.log(Object.values(IActionNumber)) // [ 'LOADING', 'ERROR', 'SUCCESS', 0, 1, 2 ]
 console.log(Object.keys(IActionNumber)) // [ '0', '1', '2', 'LOADING', 'ERROR', 'SUCCESS' ]
-console.log(IActionNumber)
 
-const _filterMethod = (status: number | string) => {
+const _filterMethod = (status: number | string): string | -1 => {
   if (typeof status === 'string') {
     status = status.toUpperCase().trim()
   }
-  console.log(status)
-  let _index = Object.values(IActionNumber).indexOf(status)
-  console.log(_index)
+  let _index =
+    typeof status === 'string'
+      ? Object.values(IActionNumber).indexOf(status)
+      : Object.keys(IActionNumber).indexOf(status.toString())
   if (_index === -1) return -1 // not found
+  const _rtn = typeof status === 'string' ? status : IActionNumber[_index]
   switch (_index) {
     case IActionNumber.LOADING:
-      return status
+      return _rtn
     case IActionNumber.ERROR:
-      return status
+      return _rtn
     case IActionNumber.SUCCESS:
-      return status
+      return _rtn
     default:
       return -1
   }
 }
 
 console.log(IActionNumber.LOADING) // 0
-console.log(_filterMethod('success')) // SUCCESS
+console.log(_filterMethod('Success')) // SUCCESS
+console.log(_filterMethod(2)) // SUCCESS
