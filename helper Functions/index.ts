@@ -110,25 +110,14 @@ console.log(_sampleArray.flat(500)) // same as flat(4)
 console.log([2, 3, 5, 7, 11, 13, 15, 17, 19, 21, 23].splice(2, 3)) // [5, 7, 11]
 console.log([2, 3, 5, 7, 11, 13, 15, 17, 19, 21, 23].slice(2, 7)) // [5, 7, 11, 13, 15]
 
-// const flattenArray = (array, depth = 1) => {
-//   return depth > 0
-//     ? array.reduce(
-//         (acc, val) =>
-//           acc.concat(Array.isArray(val)) ? flattenArray(val, depth - 1) : val,
-//         []
-//       )
-//     : array.slice()
-// }
-
-function flatDeep(arr, d = 1) {
-  return d > 0
+const flattenArray = (arr, depth = 1) => {
+  return depth > 0
     ? arr.reduce(
         (acc, val) =>
-          acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val),
+          acc.concat(Array.isArray(val) ? flattenArray(val, depth - 1) : val),
         []
       )
     : arr.slice()
 }
 
-// console.log(flattenArray(_sampleArray, 2))
-console.log(flatDeep(_sampleArray, 2))
+console.log(flattenArray(_sampleArray))
