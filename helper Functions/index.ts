@@ -4,8 +4,8 @@
 
 const _obj: { name: string; age: number; class: string } = {
   age: 21,
-  name: "hamza",
-  class: "12th grade"
+  name: 'hamza',
+  class: '12th grade'
 }
 
 // We can do the following using
@@ -44,7 +44,7 @@ const _deepClone = <T extends object>(obj: T): T => {
   const _copy: unknown = {}
   for (let key in obj) {
     let _obj = obj[key] as unknown
-    if (typeof _obj === "object" && _obj !== null) {
+    if (typeof _obj === 'object' && _obj !== null) {
       _copy[key] = _deepClone(_obj)
     }
     _copy[key] = obj[key]
@@ -53,7 +53,7 @@ const _deepClone = <T extends object>(obj: T): T => {
 }
 
 // this method will return Deep Copy of the object of any kind that we will pass in.
-console.log(_deepClone({ name: "Hamza", age: 21, e: { name: "ad" } }))
+console.log(_deepClone({ name: 'Hamza', age: 21, e: { name: 'ad' } }))
 
 /////////////////////////////////////////
 ///////////// MERGE THE ARAY //////////
@@ -89,3 +89,46 @@ const _mergeWithReduce = <T>(...array: Array<T>[]): Array<T> => {
 }
 
 console.log(_mergeWithReduce<number>(_array1, _array2, _array3, _array4))
+
+///////////////////////////////////////////////////////
+///////////////// Flattening Array ///////////////////
+/////////////////////////////////////////////////////
+// Array.flat creates new array with all sub array element concatenated into it recursively upto specified depth
+const _sampleArray = [[2], 1, [[2, 3]], [[[1, 3, 3]]], [[[[]]]]]
+console.log(_sampleArray.flat()) // [ 2, 1, [ 2, 3 ], [ [ 1, 3, 3 ] ], [ [ [] ] ] ]
+console.log(_sampleArray.flat(0)) // doesn't do anything
+console.log(_sampleArray.flat(1)) // same as flat()
+console.log(_sampleArray.flat(2)) // destructs [[2]] to 2 // [ 2, 1, 2, 3, [ 1, 3, 3 ], [ [] ] ]
+console.log(_sampleArray.flat(3)) // [ 2, 1, 2, 3, 1, 3, 3, [] ]
+console.log(_sampleArray.flat(4)) // [ 2, 1, 2, 3, 1, 3, 3 ]
+console.log(_sampleArray.flat(500)) // same as flat(4)
+
+//////////////////////////////////////////////////////
+///////////  Better way to flatten array ////////////
+////////////////////////////////////////////////////
+
+console.log([2, 3, 5, 7, 11, 13, 15, 17, 19, 21, 23].splice(2, 3)) // [5, 7, 11]
+console.log([2, 3, 5, 7, 11, 13, 15, 17, 19, 21, 23].slice(2, 7)) // [5, 7, 11, 13, 15]
+
+// const flattenArray = (array, depth = 1) => {
+//   return depth > 0
+//     ? array.reduce(
+//         (acc, val) =>
+//           acc.concat(Array.isArray(val)) ? flattenArray(val, depth - 1) : val,
+//         []
+//       )
+//     : array.slice()
+// }
+
+function flatDeep(arr, d = 1) {
+  return d > 0
+    ? arr.reduce(
+        (acc, val) =>
+          acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val),
+        []
+      )
+    : arr.slice()
+}
+
+// console.log(flattenArray(_sampleArray, 2))
+console.log(flatDeep(_sampleArray, 2))
