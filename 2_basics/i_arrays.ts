@@ -1,7 +1,7 @@
 let obj = {
-  a: "A",
-  b: "B",
-  c: "C"
+  a: 'A',
+  b: 'B',
+  c: 'C'
 }
 
 for (let array of Object.entries(obj)) {
@@ -33,20 +33,20 @@ for (let k of _obj) {
 
 // arrays are objects and objects are reference values and when we push into arrays, we are changing the memory values not memory addresses
 
-const hobbies = ["Coding", "Gaming"]
-const activeHobbies = ["Hiking"]
+const hobbies = ['Coding', 'Gaming']
+const activeHobbies = ['Hiking']
 
 activeHobbies.push(...hobbies)
 console.log(activeHobbies)
 // ["Hiking", "Coding", "Gaming"]
 
 const hobbiesObj = {
-  coding: "CODING",
-  gaming: "GAMING"
+  coding: 'CODING',
+  gaming: 'GAMING'
 }
 
 const activeHobbiesObj = {
-  hiking: "HIKING"
+  hiking: 'HIKING'
 }
 
 const _combine = Object.assign(hobbiesObj, activeHobbiesObj)

@@ -1,7 +1,7 @@
 const person = {
-  name: "Hamza",
+  name: 'Hamza',
   age: 25,
-  hobbies: ["Sports", "Cooking"]
+  hobbies: ['Sports', 'Cooking']
 }
 
 for (let hobby of person.hobbies) {
