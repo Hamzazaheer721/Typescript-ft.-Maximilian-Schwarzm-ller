@@ -15,3 +15,9 @@ Interfaces and types are not exactly the same although you could use them for sa
 ==> We could use Readonly property in interfaces. which suggests that the following property in interface could be given value once
 
 ==> We could also extend intefaces like as follows: interface interfaceName extends IntefaceName
+
+/////////////////////////////////////////
+//////////////// NOTE //////////////////
+///////////////////////////////////////
+
+Interfaces always have public properites, you can't define protected and private properties in Interfaces
