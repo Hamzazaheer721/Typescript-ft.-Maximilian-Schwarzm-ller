@@ -1,7 +1,22 @@
-const hobbies = ["Hiking", "Coding"]
+const hobbies = ["Hiking", "Coding", "Gaming", "Cycling"]
+
+///////////////////////////////////////////
+///////// Array Destructuring ////////////
+/////////////////////////////////////////
+
+// Method # 1
 const firstHobby = hobbies[0]
 console.log(firstHobby) // Hiking
 
+// Method # 2
+const [,,,Cycling] = hobbies
+console.log(Cycling) //Cycling 
+
+// Better way 
+// Since array is also an iteratable object so we can destruct it with its indices and name those indices like we usually do in object
+const {3: _Cycling} = hobbies 
+console.log(_Cycling) //Cycling 
+ 
 //Destructering the String itself
 let [firstLetter] = firstHobby
 console.log(firstLetter) // H
