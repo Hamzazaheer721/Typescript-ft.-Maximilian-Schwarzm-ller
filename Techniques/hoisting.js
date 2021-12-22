@@ -142,3 +142,17 @@ _functionScopeExample()
 //   console.log(_var)
 //   var _var = 'Hey I am being used as functional scoped variable'
 // }
+
+//////////////////////////////////
+///////// Hoisting & let ////////
+////////////////////////////////
+
+//variables declared with block scoped and not function scoped
+function _func_A() {
+  console.log(bVar)
+  function _func_B() {
+    var bVar = 2
+  }
+}
+
+_func_A()
