@@ -124,3 +124,21 @@ var _globalVar = 'Hey this is global variable'
 // var _globalVar
 // console.log(_globalVar) // undefined
 // _globalVar = 'Hey this is global variable'
+
+// FUNCTION SCOPED VARIABLES
+// as we have seen before, variables with global scope are hoisted on the top of the scope.
+// Now lets look function scoped variables are hoisted
+
+function _functionScopeExample() {
+  console.log(_var) // undefined
+  var _var = 'Hey I am being used as functional scoped variable'
+}
+
+_functionScopeExample()
+
+// This is how interpreter views the above code
+// function _functionScopeExample() {
+//   var _var
+//   console.log(_var)
+//   var _var = 'Hey I am being used as functional scoped variable'
+// }
