@@ -1,6 +1,5 @@
 // If response of one async method is required into another async method then
 // We could use the following:
-
 // Solution priors to callbacks are as follows
 
 ////////////////////////////////////////
