@@ -45,8 +45,9 @@ const _func = () => {
 
 var _htmlVar = 'Hello World!'
 // this can be used with window._htmlVar
-
 // Global variables defined with let keyword don't belong to window object
+
+// Note => Function Arguements work as local variables.
 
 //////////////////////////////////////////
 ///// variable vs Reference Error ///////
@@ -58,10 +59,6 @@ console.log(typeof variable) // undefined
 console.log(typeof _variable) // number
 _variable = 2
 console.log(_variable) // 2
-
-///////////////////////////////////////////
-////////// Hoisting //////////////////////
-/////////////////////////////////////////
 
 /////////////////////////////////////
 //////////// NOTE //////////////////
@@ -80,3 +77,31 @@ console.log(b) // 2
 function __func() {
   b = 2
 }
+
+///////////////////////////////////////////
+////////// Hoisting //////////////////////
+/////////////////////////////////////////
+
+// previously, I've used the example of variable declared with var
+
+console.log(hoistVar) // undefined
+
+var hoistVar = 'Hey I am being hoisted'
+
+// why this happened ?
+// Hoisting !, all variables and function declarations are hoisted on top of their scope.
+// javascript, hoisted the variable hoistVar like as follows
+var hoist_var
+console.log(hoist_var)
+hoist_var = 'Hey I am being hoisted'
+
+// On other hand, undeclared variables don't exist until the code assigning them is executed,
+// Therefore, assigning value to undeclared variable implicitly creates it as a global value;
+function hoist() {
+  a = 20
+  var _b = 20
+}
+
+console.log(a) // hey
+
+// console.log(_b) // not accessible
