@@ -35,6 +35,19 @@ const _func = () => {
   console.log(carName) // Audi
 }
 
+///////////////////////////////////////////
+/////// Global Variables in HTML /////////
+/////////////////////////////////////////
+
+// In Js, the global scope is the javascript environment
+// In HTML, the global scope is window Object.
+// Global variables defined with var keyword belong to window object
+
+var _htmlVar = 'Hello World!'
+// this can be used with window._htmlVar
+
+// Global variables defined with let keyword don't belong to window object
+
 //////////////////////////////////////////
 ///// variable vs Reference Error ///////
 ////////////////////////////////////////
@@ -45,6 +58,11 @@ console.log(typeof variable) // undefined
 console.log(typeof _variable) // number
 _variable = 2
 console.log(_variable) // 2
+
+///////////////////////////////////////////
+////////// Hoisting //////////////////////
+/////////////////////////////////////////
+
 /////////////////////////////////////
 //////////// NOTE //////////////////
 ///////////////////////////////////
