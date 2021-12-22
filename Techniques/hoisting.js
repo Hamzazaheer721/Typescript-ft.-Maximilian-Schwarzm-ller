@@ -97,6 +97,7 @@ hoist_var = 'Hey I am being hoisted'
 
 // On other hand, undeclared variables don't exist until the code assigning them is executed,
 // Therefore, assigning value to undeclared variable implicitly creates it as a global value;
+
 function hoist() {
   a = 20
   var _b = 20
@@ -105,3 +106,21 @@ function hoist() {
 console.log(a) // hey
 
 // console.log(_b) // not accessible
+
+////////////////////////////////////////////
+///////////////// ES5 /////////////////////
+//////////////////////////////////////////
+
+// the scope of the variable declared with var is in current execution context
+// This is either the enclosing function or for the variable that is declared outside of the function, global
+
+// GLOBAL VARIABLES
+console.log(_globalVar) // undefined
+
+var _globalVar = 'Hey this is global variable'
+
+// javascript has hoisted our variable and this is how the code looks like to interpreter
+
+// var _globalVar
+// console.log(_globalVar) // undefined
+// _globalVar = 'Hey this is global variable'
