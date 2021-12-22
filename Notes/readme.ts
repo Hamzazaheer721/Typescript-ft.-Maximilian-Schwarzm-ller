@@ -67,7 +67,5 @@ const _asyncAwaitMethod = async () => {
   return res_D
 }
 
-let variable = 0
 const _res = _asyncAwaitMethod().then((_res) => console.log(_res))
-
 console.log(_res)
