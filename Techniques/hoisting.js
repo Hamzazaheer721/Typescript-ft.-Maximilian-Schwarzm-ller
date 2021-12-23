@@ -167,3 +167,14 @@ console.log(__bGlobe) // 2
 
 // variables defined with var will be initialized to undefined at the beginning of execution
 // variables declared with let and const are uninitalized
+
+let _letVar
+console.log(_letVar) //undefined
+_letVar = "I will be undefined above"
+
+// console.log(_letVar_2)
+// let _letVar_2 = "I will throw reference error in this case"
+
+// const _constVar; // can't access _constVar before intialization
+// console.log(_constVar) // this has to be intialized
+// _constVar = "I will throw error above because I need to be initialized"
