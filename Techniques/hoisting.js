@@ -160,3 +160,10 @@ function _func_A() {
 
 _func_A()
 console.log(__bGlobe) // 2
+
+//////////////////////////////////////////////////////
+////////////// var <-> let & const //////////////////
+////////////////////////////////////////////////////
+
+// variables defined with var will be initialized to undefined at the beginning of execution
+// variables declared with let and const are uninitalized
