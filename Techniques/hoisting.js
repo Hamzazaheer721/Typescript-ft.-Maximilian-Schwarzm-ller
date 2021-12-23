@@ -167,6 +167,7 @@ console.log(__bGlobe) // 2
 
 // variables defined with var will be initialized to undefined at the beginning of execution
 // variables declared with let and const are uninitalized
+// const has to be declared and initialized at the same time
 
 let _letVar
 console.log(_letVar) //undefined
@@ -178,3 +179,11 @@ _letVar = "I will be undefined above"
 // const _constVar; // can't access _constVar before intialization
 // console.log(_constVar) // this has to be intialized
 // _constVar = "I will throw error above because I need to be initialized"
+
+/////////////////////////////////////////////////////////////
+//////////////// Hoisting Functions ////////////////////////
+///////////////////////////////////////////////////////////
+
+// Js functions can be loosely classified as follows
+// function declaration
+// function expressions
