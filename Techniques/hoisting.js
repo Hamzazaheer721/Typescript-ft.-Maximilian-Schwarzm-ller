@@ -29,7 +29,7 @@ function _localScope() {
 // variables declared outside of function has global scope
 // console.log(carName) // cant access variable before initialization
 
-let carName = 'Audi'
+let carName = "Audi"
 
 const _func = () => {
   console.log(carName) // Audi
@@ -43,7 +43,7 @@ const _func = () => {
 // In HTML, the global scope is window Object.
 // Global variables defined with var keyword belong to window object
 
-var _htmlVar = 'Hello World!'
+var _htmlVar = "Hello World!"
 // this can be used with window._htmlVar
 // Global variables defined with let keyword don't belong to window object
 
@@ -67,7 +67,7 @@ console.log(_variable) // 2
 // we get error when we use variable initialized with let and const but with var, we get undefined due to hoisting
 // in hoisting, variables are t
 // console.log(a) // undefined ===> block scope variable is defined before its declaration
-const a = 'hey'
+const a = "hey"
 
 // Variables defined outside of functions become global variables
 // If we have initialize a variable without declaring it then it automatically becomes global variable
@@ -86,14 +86,14 @@ function __func() {
 
 console.log(hoistVar) // undefined
 
-var hoistVar = 'Hey I am being hoisted'
+var hoistVar = "Hey I am being hoisted"
 
 // why this happened ?
 // Hoisting !, all variables and function declarations are hoisted on top of their scope.
 // javascript, hoisted the variable hoistVar like as follows
 var hoist_var
 console.log(hoist_var)
-hoist_var = 'Hey I am being hoisted'
+hoist_var = "Hey I am being hoisted"
 
 // On other hand, undeclared variables don't exist until the code assigning them is executed,
 // Therefore, assigning value to undeclared variable implicitly creates it as a global value;
@@ -117,7 +117,7 @@ console.log(a) // hey
 // GLOBAL VARIABLES
 console.log(_globalVar) // undefined
 
-var _globalVar = 'Hey this is global variable'
+var _globalVar = "Hey this is global variable"
 
 // javascript has hoisted our variable and this is how the code looks like to interpreter
 
@@ -131,7 +131,7 @@ var _globalVar = 'Hey this is global variable'
 
 function _functionScopeExample() {
   console.log(_var) // undefined
-  var _var = 'Hey I am being used as functional scoped variable'
+  var _var = "Hey I am being used as functional scoped variable"
 }
 
 _functionScopeExample()
@@ -143,16 +143,20 @@ _functionScopeExample()
 //   var _var = 'Hey I am being used as functional scoped variable'
 // }
 
-//////////////////////////////////
-///////// Hoisting & let ////////
-////////////////////////////////
+/////////////////////////////////////////
+///////// Hoisting & let, const ////////
+///////////////////////////////////////
 
 //variables declared with block scoped and not function scoped
 function _func_A() {
-  console.log(bVar)
+  console.log(__bGlobe) // 2
   function _func_B() {
+    console.log("bVar : ", bVar) // bVar: undefined
     var bVar = 2
   }
+  __bGlobe = 2 // this will be global variable
+  _func_B()
 }
 
 _func_A()
+console.log(__bGlobe) // 2
