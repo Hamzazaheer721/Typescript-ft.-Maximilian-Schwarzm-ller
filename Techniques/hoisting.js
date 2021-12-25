@@ -148,6 +148,8 @@ _functionScopeExample()
 ///////////////////////////////////////
 
 //variables declared with block scoped and not function scoped
+console.log(__bGlobe) // 2
+
 function _func_A() {
   console.log(__bGlobe) // 2
   function _func_B() {
@@ -187,3 +189,55 @@ _letVar = "I will be undefined above"
 // Js functions can be loosely classified as follows
 // function declaration
 // function expressions
+
+/////////////////////////////////////////////////////
+//////////// Functions Declaration /////////////////
+///////////////////////////////////////////////////
+
+// These are of following forms and completly hoisted to completely top.
+// Js allow us to invoke us function before declaring it
+
+console.log(hoistedFunc_()) // Output
+console.log(typeof hoistedFunc_) // function
+
+function hoistedFunc_() {
+  console.log("I will hoisted as I am implementation of function declaration") // I will hoisted as I am implementation of function declaration
+}
+
+////////////////////////////////////////////////
+////////// Functions expression ///////////////
+//////////////////////////////////////////////
+
+console.log(typeof functionExp_) // undefined => just like variables declared with var
+// console.log(functionExp_()) // functionExp_ is not a function
+var functionExp_ = function () {
+  console.log("const functionExp will be hoisted above")
+}
+
+///////////////////////////////////////////////////
+/////////////// PRECENDENCE LEVEL ////////////////
+/////////////////////////////////////////////////
+
+// variable assignment > function declaration > variable declaration
+
+/////////////////////////////////
+////////// EXAMPLE # 1 /////////
+///////////////////////////////
+
+var prec_exp_var = 23
+function prec_exp_var() {
+  console.log("I am function declaration")
+}
+
+console.log(prec_exp_var) // 23
+
+/////////////////////////////////
+/////////// EXAMPLE # 2 ////////
+///////////////////////////////
+
+var prec_exp_2_var
+var prec_exp_2_var = function () {
+  console.log("I am function declaration")
+}
+
+console.log(typeof prec_exp_2_var) // function
