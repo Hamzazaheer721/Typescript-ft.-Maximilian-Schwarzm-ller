@@ -96,6 +96,7 @@ console.log(_mergeWithReduce<number>(_array1, _array2, _array3, _array4))
 
 // Array.flat creates new array with all sub array element concatenated into it recursively upto specified depth
 const _sampleArray = [[2], 1, [[2, 3]], [[[1, 3, 3]]], [[[[]]]]]
+
 console.log(_sampleArray.flat()) // [ 2, 1, [ 2, 3 ], [ [ 1, 3, 3 ] ], [ [ [] ] ] ]
 console.log(_sampleArray.flat(0)) // doesn't do anything
 console.log(_sampleArray.flat(1)) // same as flat()
@@ -104,9 +105,9 @@ console.log(_sampleArray.flat(3)) // [ 2, 1, 2, 3, 1, 3, 3, [] ]
 console.log(_sampleArray.flat(4)) // [ 2, 1, 2, 3, 1, 3, 3 ]
 console.log(_sampleArray.flat(500)) // same as flat(4)
 
-//////////////////////////////////////////////////////
-///////////  Better way to flatten array ////////////
-////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+///////////  Better way to flatten array /////////////
+/////////////////////////////////////////////////////
 
 console.log([2, 3, 5, 7, 11, 13, 15, 17, 19, 21, 23].splice(2, 3)) // [5, 7, 11]
 console.log([2, 3, 5, 7, 11, 13, 15, 17, 19, 21, 23].slice(2, 7)) // [5, 7, 11, 13, 15]
