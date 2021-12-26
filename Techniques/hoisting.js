@@ -148,10 +148,10 @@ _functionScopeExample()
 ///////////////////////////////////////
 
 //variables declared with block scoped and not function scoped
-console.log(__bGlobe) // 2
+// console.log(__bGlobe) // 2
 
 function _func_A() {
-  console.log(__bGlobe) // 2
+  // console.log(__bGlobe) // 2
   function _func_B() {
     console.log("bVar : ", bVar) // bVar: undefined
     var bVar = 2
@@ -241,3 +241,58 @@ var prec_exp_2_var = function () {
 }
 
 console.log(typeof prec_exp_2_var) // function
+
+//////////////////////////////////////////////////
+/////////// Class Hoisting //////////////////////
+/////////////////////////////////////////////////
+
+// JS Classes either can be loosely classfied as following
+// => Class Declaration
+// => Class Expressions
+
+///////////////////////////////////
+///////// Class Declaration //////
+/////////////////////////////////
+
+// Yes, Class declarations are hoisted but they remain unintialized until evaluation.
+// This means, that you have to delcare the class before you initialize it.
+
+////////////////////////////////
+///// Class Declaration ///////
+//////////////////////////////
+
+// var _attique = new Person("Attique", 25.5) // can't access Person before initialization
+
+class Person {
+  constructor(name, age) {
+    this.name = name
+    this.age = age
+  }
+}
+
+var hamza = new Person("hamza", 25)
+console.log(hamza.name)
+
+///////////////////////////////
+//////// Class Expressions ///
+/////////////////////////////
+
+// Much like function expressions, class expressions are not hoisted
+
+// var square = new Polygon() // Polygon is not constructor
+// square.height = 25
+// square.width = 25
+
+// console.log(square)
+
+var Polygon = class {
+  constructor(height, width) {
+    this.height = height
+    this.width = width
+  }
+}
+
+var square = new Polygon()
+square.height = 25
+square.width = 25
+console.log(square) // Polygon {height: 25, width: 25}
