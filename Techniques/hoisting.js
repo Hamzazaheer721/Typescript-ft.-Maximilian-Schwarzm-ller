@@ -65,7 +65,7 @@ console.log(_variable) // 2
 ///////////////////////////////////
 
 // we get error when we use variable initialized with let and const but with var, we get undefined due to hoisting
-// in hoisting, variables are t
+// in hoisting, variables are to the top of the scope before code execution
 // console.log(a) // undefined ===> block scope variable is defined before its declaration
 const a = "hey"
 
@@ -147,7 +147,7 @@ _functionScopeExample()
 ///////// Hoisting & let, const ////////
 ///////////////////////////////////////
 
-//variables declared with block scoped and not function scoped
+// variables declared with block scoped and not function scoped
 // console.log(__bGlobe) // 2
 
 function _func_A() {
