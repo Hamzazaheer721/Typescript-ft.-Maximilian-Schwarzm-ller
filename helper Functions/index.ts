@@ -244,6 +244,7 @@ console.log(rtnObjWithRemovedLastKey(_obj__))
 ///////////////////////////////////////////////////////////////////////////
 
 const countFunc = (str: string): object => {
+  if (!str) return { error: 'EMPTY!' }
   str = str.trim()
   let obj = {}
   for (let val of str) {
@@ -255,6 +256,7 @@ const countFunc = (str: string): object => {
   return obj
 }
 
+console.log(countFunc(''))
 console.log(countFunc('WWWWWWWWWW'))
 console.log(countFunc('hamza'))
 console.log(countFunc('Hi! 13931 is my number'))
