@@ -253,6 +253,6 @@ const countFunct = (str) => {
   }
   return obj
 }
-
+console.log(countFunct('WWWWWWWWWW'))
 console.log(countFunct('hamza'))
 console.log(countFunct('Hi! 13931 is my number'))
