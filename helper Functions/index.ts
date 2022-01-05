@@ -301,4 +301,35 @@ const checkAlphaNumeric = (str: string): boolean => {
   return true
 }
 
-console.log(checkAlphaNumeric('heyA13'))
+let t1, t2
+t1 = performance.now()
+console.log(checkAlphaNumeric('heyA13')) //this version is faster
+t2 = performance.now()
+console.log(`perfomance ${t2 - t1 / 1000} seconds`)
+
+t1 = performance.now()
+console.log(CheckAlphaNumericWithRegex('heyA13'))
+t2 = performance.now()
+console.log(`perfomance ${t2 - t1 / 1000} seconds`)
+
+/////////// BETTER WAU //////////
+
+const countFunc_ = (str: string): object => {
+  if (!str) return { error: 'EMPTY!' }
+  str = str.toLowerCase().trim()
+  let obj = {}
+  for (let val of str) {
+    if (!checkAlphaNumeric(val)) break
+    if (!obj.hasOwnProperty(val)) {
+      obj = { [val]: 0, ...obj }
+    }
+    obj = { [val]: obj[val]++, ...obj }
+  }
+  return obj
+}
+
+console.log(countFunc_(''))
+console.log(countFunc_('Hamza90{}a'))
+console.log(countFunc_('WWWWWWWWWW'))
+console.log(countFunc_('hamza'))
+console.log(countFunc_('Hi! 13931 is my number'))
