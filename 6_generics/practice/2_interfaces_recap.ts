@@ -8,10 +8,10 @@ const rtnObjWithRemovedLastKey = <T extends object>(obj: T): T => {
   return obj
 }
 
-const _obj = {
-  name: "hamza",
+const _obj__ = {
+  name: 'hamza',
   age: 23,
-  city: "Islamabad"
+  city: 'Islamabad'
 }
 
-console.log(rtnObjWithRemovedLastKey(_obj))
+console.log(rtnObjWithRemovedLastKey(_obj__))
