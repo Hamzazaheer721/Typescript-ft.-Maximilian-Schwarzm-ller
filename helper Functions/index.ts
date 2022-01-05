@@ -262,3 +262,43 @@ console.log(countFunc('Hamza90{}'))
 console.log(countFunc('WWWWWWWWWW'))
 console.log(countFunc('hamza'))
 console.log(countFunc('Hi! 13931 is my number'))
+
+///////////////////////////////////////
+/////////// CharCodeAt ///////////////
+/////////////////////////////////////
+
+// CharCodeAt returns an integer between 0 and 65535 representing UTF-16 code unit at given index
+
+console.log('A'.charCodeAt(0)) // 65
+console.log('Z'.charCodeAt(0)) // 90;
+console.log('a'.charCodeAt(0)) // 97
+console.log('z'.charCodeAt(0)) // 122;
+console.log('0'.charCodeAt(0)) // 48
+console.log('9'.charCodeAt(0)) // 57;
+
+// A-Z is between 64-91
+// a-z is between 96-123
+// 0-9 is between 47-58
+
+const CheckAlphaNumericWithRegex = (str: string): boolean => {
+  let res = /^[a-z0-9]+$/
+  return res.test(str)
+}
+
+const checkAlphaNumeric = (str: string): boolean => {
+  // apply loop on string and apply condition
+  for (let i = 0, len = str.length; i < len; i++) {
+    let code = str.charCodeAt(i)
+    console.log(code)
+    if (
+      !(47 < code && code < 58) &&
+      !(96 < code && code < 123) &&
+      !(64 < code && code < 91)
+    ) {
+      return false
+    }
+  }
+  return true
+}
+
+console.log(checkAlphaNumeric('heyA13'))
