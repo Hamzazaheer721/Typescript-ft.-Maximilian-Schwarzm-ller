@@ -245,9 +245,10 @@ console.log(rtnObjWithRemovedLastKey(_obj__))
 
 const countFunc = (str: string): object => {
   if (!str) return { error: 'EMPTY!' }
-  str = str.trim()
+  str = str.toLowerCase().trim()
   let obj = {}
   for (let val of str) {
+    if (!/[a-z0-9]/.test(val)) break
     if (!obj.hasOwnProperty(val)) {
       obj = { [val]: 0, ...obj }
     }
@@ -257,6 +258,7 @@ const countFunc = (str: string): object => {
 }
 
 console.log(countFunc(''))
+console.log(countFunc('Hamza90{}'))
 console.log(countFunc('WWWWWWWWWW'))
 console.log(countFunc('hamza'))
 console.log(countFunc('Hi! 13931 is my number'))
