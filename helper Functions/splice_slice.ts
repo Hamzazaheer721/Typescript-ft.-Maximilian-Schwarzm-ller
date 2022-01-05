@@ -20,6 +20,9 @@ console.log(_rainForests.slice(2, 3)) // ["Cerrado"]
 console.log(_rainForests.slice(0, 2)) // ["Amazon", "Borneo"]
 console.log(_rainForests) // ["Amazon", "Borneo","Cerrado, "Congo"]
 
+///////////////// //////////////////
+/////////// OPERATIONS ///// //////
+///// // /////////////////////////
 const _arr = [1, 2, 3, 4, 5, 6]
 let _res: Partial<typeof _arr> = []
 
