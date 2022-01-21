@@ -271,7 +271,7 @@ class Person {
 }
 
 var hamza = new Person("hamza", 25)
-console.log(hamza.name)
+console.log(hamza.name);
 
 ///////////////////////////////
 //////// Class Expressions ///
