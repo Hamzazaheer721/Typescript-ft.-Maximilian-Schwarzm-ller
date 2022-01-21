@@ -5,7 +5,7 @@ const isNan = <T>(val: T): boolean => {
   let n = +val
   console.log('value after typecasting :', n)
   console.log(`n===n: ${n} === ${n} =>  ${n === n}`)
-  console.log(`n!==n: ${n} === ${n} => ${n !== n}`)
+  console.log(`n!==n: ${n} !== ${n} => ${n !== n}`)
   return n !== n
 }
 
