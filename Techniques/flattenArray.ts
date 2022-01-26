@@ -21,3 +21,20 @@ const array = ['hamza', 'Ali']
 const { 0: ahmad } = array
 
 console.log(ahmad) // hamza
+
+/* Another way to flatten the array */
+
+const flattenTheArray = (arr): Array<number> => {
+  const res: number[] = []
+  while (arr.length) {
+    let el = arr.shift()
+    if (Array.isArray(el)) {
+      arr = el.concat(arr)
+    } else {
+      res.push(el)
+    }
+  }
+  return res
+}
+
+console.log(flattenTheArray([[[[[[[[[23, 3]], 3, 2]]]]]], 32, 53, 12])) // [ 23, 3, 3, 2, 32, 53, 12 ]
