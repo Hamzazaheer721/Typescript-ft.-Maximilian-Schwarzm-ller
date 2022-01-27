@@ -8,5 +8,4 @@ const isNan = <T>(val: T): boolean => {
   console.log(`n!==n: ${n} !== ${n} => ${n !== n}`)
   return n !== n
 }
-
 console.log(isNan('92'))
