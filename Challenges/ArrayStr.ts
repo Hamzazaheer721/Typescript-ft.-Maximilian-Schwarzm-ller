@@ -23,12 +23,12 @@ const ArrayStr = (arr: string[]): string => {
     let char = firstElement.charAt(i)
     charArray.push(char)
     let firstWord = charArray.join('')
-    let sceondWord = firstElement.substring(i + 1, firstElement.length)
+    let secondWord = firstElement.substring(i + 1, firstElement.length)
     if (
       secondElement.includes(firstWord) &&
-      secondElement.includes(sceondWord)
+      secondElement.includes(secondWord)
     ) {
-      rtnString = `${firstWord},${sceondWord}`
+      rtnString = `${firstWord},${secondWord}`
       break
     }
   }
