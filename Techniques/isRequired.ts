@@ -3,7 +3,7 @@ interface IRequired {
 }
 
 interface IFunc {
-  <T>(a: T | never): T
+  <T>(a: T): T
 }
 
 const isRequired: IRequired = () => {
@@ -15,4 +15,4 @@ const func: IFunc = (arg = isRequired()) => {
 }
 
 console.log(func('String is being shown'))
-console.log(func())
+// console.log(func()) // this will throw error
