@@ -14,10 +14,10 @@ const flattenArray_: IFlattenArray = (arr, depth) => {
     : arr.slice()
 }
 
-const array_ = [[[[[[[[[23, 3]], 3, 2]]]]]], 32, 53, 12]
+const array_ = [[[[[[[[[23, 3]], 3, 2]]]]]], 32, 53, "hamza"]
 console.log(flattenArray_(array_, Infinity))
 
-const array = ['hamza', 'Ali']
+const array = ["hamza", "Ali"]
 const { 0: ahmad } = array
 
 console.log(ahmad) // hamza
