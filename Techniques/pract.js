@@ -26,6 +26,7 @@ function academicNotes(objectNotes) {
     }
     accumulatedPercentage = accumulatedPercentage + objectNotes[key]
   }
+
   if (accumulatedPercentage > 100) {
     throw new Error('Total sum of percentage values exceeds the maximum')
   }
