@@ -48,7 +48,7 @@ console.log(obj_3)
 /* Method # 3: Deep Copy */
 const obj_4 = JSON.parse(JSON.stringify(obj_1))
 obj_4.address.colony = 'DHA'
-obj_4.address.street = 'st.911'
+obj_4.address.street = 'st.91124'
 
 console.log(obj_1)
 console.log(obj_2)
