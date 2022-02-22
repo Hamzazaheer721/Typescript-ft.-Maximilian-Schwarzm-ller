@@ -32,4 +32,6 @@ const obj3 = {
 }
 
 console.log(obj === obj3) // false
-console.log(compareObjects(obj, obj2, obj3)) // true
+console.log(compareObjects(obj, obj3)) //true
+console.log(compareObjects(obj, obj3, obj)) //true
+console.log(compareObjects(obj, obj2, obj3)) // false
