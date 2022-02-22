@@ -1,9 +1,8 @@
-function arrange(sentence: string): string {
+const arrange = (sentence: string): string => {
   let normalizedString: string[] = sentence
     .toLowerCase()
     .split('.')
-    .join(' ')
-    .trim()
+    .join('')
     .split(' ')
   let sortedArray: string[] = normalizedString.sort(
     (a, b) => a.length - b.length
@@ -15,4 +14,5 @@ function arrange(sentence: string): string {
 let str1 = 'The lines are printed in reverse order.'
 let str2 = 'Here i come.'
 let str3 = 'I love to code.'
-console.log(arrange(str3))
+console.log(arrange(str2))
+console.log(arrange(str1))
