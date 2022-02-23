@@ -17,3 +17,8 @@ for (let hobby of person.hobbies) {
 const array = ['comma', 'ewo,e,e,tert,co,mm,a,mma']
 
 console.log(array.join(' '))
+
+/* Array enteries */
+for (const { 0: key, 1: value } of array.entries()) {
+  console.log(key, value)
+}

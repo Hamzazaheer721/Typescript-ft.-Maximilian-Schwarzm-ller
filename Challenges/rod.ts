@@ -12,10 +12,11 @@ const rodOffcut = (lengths: number[]): number[] => {
   let rtn_array: number[] = []
   while (lengths.length) {
     rtn_array.push(lengths.length)
-    let rtn_ = calculateShortestElements(lengths)
+    const rtn_: object = calculateShortestElements(lengths)
     for (const [_, val] of Object.entries(rtn_)) {
       let val_ = +val
       lengths.splice(lengths.indexOf(val_), 1)
+      console.log(lengths)
     }
   }
   return rtn_array as number[]
