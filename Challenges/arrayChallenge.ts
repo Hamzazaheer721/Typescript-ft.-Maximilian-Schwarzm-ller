@@ -79,11 +79,15 @@ const arr_ = arr
   .flat()
   .map((role) => role.name)
 let t2 = performance.now()
-console.log(`time is ${(t2 - t1) / 1000}`)
+let t3 = (t2 - t1) / 1000
+console.log(`time is ${t3}`)
 
 t1 = performance.now()
 const arr__ = arr.map((obj) => obj.roles.map((role) => role.name)).flat()
 t2 = performance.now()
-console.log(`time is ${(t2 - t1) / 1000}`)
+let t4 = (t2 - t1) / 1000
+console.log(`time is ${t4}`)
+
+console.log(t4 > t3 ? 'First one is faster' : 'Second one is faster') // Second one is faster
 
 console.log(arr__)
