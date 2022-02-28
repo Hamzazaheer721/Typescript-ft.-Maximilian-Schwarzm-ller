@@ -34,13 +34,6 @@ interface IPerson {
   age: number
 }
 
-interface ISouthAsianPerson extends IPerson, IAddressSouthAsia {
-  name: string
-  age: number
-  country: ICountryActions.SOUTHASIA
-  city: CitySouthAsia
-  street: string
-  state: string
-}
+interface ISouthAsianPerson extends IPerson, IAddressSouthAsia {}
 
 interface Developer {}
