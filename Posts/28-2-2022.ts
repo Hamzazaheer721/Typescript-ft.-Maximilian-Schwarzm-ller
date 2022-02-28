@@ -16,9 +16,9 @@ export interface IPerson {
   age: number
 }
 
-export type IPersonWithAddress = IPerson & IAddress
+export type PersonWithAddress = IPerson & IAddress
 
-const personWithAddress: IPersonWithAddress = {
+const personWithAddress: PersonWithAddress = {
   name: 'Hamza',
   age: 25,
   address: {
