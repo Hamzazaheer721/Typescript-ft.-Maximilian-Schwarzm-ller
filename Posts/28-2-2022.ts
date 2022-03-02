@@ -7,16 +7,18 @@ type AddressType = {
   colony: string
 }
 
-interface IPerson {
-  name: string
-  age: number
-}
 interface IAddress {
   address: AddressType
 }
 
-type IPersonWithAddress = IPerson & IAddress
-const _obj: IPersonWithAddress = {
+export interface IPerson {
+  name: string
+  age: number
+}
+
+export type PersonWithAddress = IPerson & IAddress
+
+const personWithAddress: PersonWithAddress = {
   name: 'Hamza',
   age: 25,
   address: {
@@ -26,27 +28,21 @@ const _obj: IPersonWithAddress = {
   }
 }
 
-const obj: IPerson = {
+const person: IPerson = {
   name: 'Hamza',
   age: 25
 }
 
-//Destructuring
-/* Method # 1 */
-const __obj = { name: _obj.name, ..._obj }
-/* Method # 2 */
-const { age, name: objName } = obj
-
 // Shallow Copying the object
 
 /* Method # 1 */
-const { ...clone } = obj
+const { ...clone } = person
 
 /* Method # 2 */
-const clone_ = Object.assign({}, obj)
+const clone_ = Object.assign({}, person)
 
 /* Method # 3 */
-const clone__ = { ...obj }
+const clone__ = { ...person }
 
 console.log(clone) // {name: "Hamza", age: 25}
 console.log(clone_) // {name: "Hamza", age: 25}
@@ -56,17 +52,12 @@ console.log(clone__) // {name: "Hamza", age: 25}
 
 /* Deep cloning Method */
 
-let t1, t2, t3, t4
 /* Method # 1 */
-t1 = performance.now()
-const deepClone = JSON.parse(JSON.stringify(obj))
-t2 = performance.now()
-t3 = (t2 - t1) / 1000
+const deepClone = JSON.parse(JSON.stringify(person))
 
 /* Method # 2 */
 const cloneDeep = <T extends object>(obj: T): T => {
   const clone = {} as unknown
-  console.log(obj)
   for (let key in obj) {
     if (typeof obj[key] === 'object' && obj[key] !== null)
       clone[key] = cloneDeep(obj[key] as unknown as T)
@@ -74,16 +65,6 @@ const cloneDeep = <T extends object>(obj: T): T => {
   }
   return clone as T
 }
-t1 = performance.now()
 
-const deepClone_ = cloneDeep(new Date())
-t2 = performance.now()
-t4 = (t2 - t1) / 1000
-
+const deepClone_ = cloneDeep(personWithAddress)
 console.log(deepClone_)
-
-console.log(
-  t4 > t3
-    ? `JSON Serialization is faster ${(t3 / t4).toFixed(2)} times`
-    : `Custom Deep Clone method is faster ${(t4 / t3).toFixed(2)} times`
-)
