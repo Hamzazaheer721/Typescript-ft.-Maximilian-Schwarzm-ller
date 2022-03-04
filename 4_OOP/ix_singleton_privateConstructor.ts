@@ -1,5 +1,5 @@
 // Singleton class is the class that can only have one object
-// After first time of creating instance, if we try to instantate the Singleton class, then next variable will always point to the first instance created
+// After first time of creating instance, if we try to instantiate the Singleton class, then next variable will always point to the first instance created
 // This is usually implemented by singleton pattern
 // We won't be able to instantiate this class from outside since our constructor will be private in this case
 // How do we make object of a class which can't be instantiated?
@@ -31,20 +31,20 @@ class ITDepartment extends Department {
 }
 
 const itDeptObj = ITDepartment.createInstance(
-  "Park Road, Islamabad",
-  "Hamza Zaheer"
+  'Park Road, Islamabad',
+  'Hamza Zaheer'
 )
 
 // now this itDeptObj can access all the properties and methods of ITDepartment class and its parent class
 itDeptObj.describe()
 
 const itDeptObj_2 = ITDepartment.createInstance(
-  "Ahamadabad, India",
-  "Suresh Patil"
+  'Ahamadabad, India',
+  'Suresh Patil'
 )
 
 if (itDeptObj === itDeptObj_2) {
-  console.log("I will always be executed since both variables are equal")
+  console.log('I will always be executed since both variables are equal')
 } else {
   console.log("I won't be executed")
 }

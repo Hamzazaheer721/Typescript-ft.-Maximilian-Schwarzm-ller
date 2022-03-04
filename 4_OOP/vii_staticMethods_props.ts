@@ -19,7 +19,7 @@ class Department {
 class ITDepartment extends Department {
   static fiscalYear = 2022
   static staticEmployees: string[] = []
-  protected lastEmployee: string = ""
+  protected lastEmployee: string = ''
   constructor(id: number, protected employees: string[]) {
     super(id)
     this.lastEmployee = employees.pop()
@@ -27,7 +27,7 @@ class ITDepartment extends Department {
 
   static addStaticEmployee(name: string) {
     // you can either use this.staticEmployees or ITDepartment.staticEmployees inside the class
-    this.staticEmployees.push(name) 
+    this.staticEmployees.push(name)
     return {
       name: ITDepartment.staticEmployees
     }
@@ -56,15 +56,15 @@ class ITDepartment extends Department {
   }
 }
 
-const employee = ITDepartment.addStaticEmployee("Hamza")
+const employee = ITDepartment.addStaticEmployee('Hamza')
 const year = ITDepartment.fiscalYear
 console.log(employee) // {name: "Hamza"}
 console.log(year) // 2022
 
-ITDepartment.addStaticEmployee("Aleen") // Aleen will be added to the static property of the class permanently from now on
+ITDepartment.addStaticEmployee('Aleen') // Aleen will be added to the static property of the class permanently from now on
 const _emp = ITDepartment.staticEmployees
 console.log(_emp) // ["Hamza", "Aleen"]
 
 ITDepartment.fiscalYear = 2023 // fiscal date has been changed as well forever from now on
-const _dept = new ITDepartment(23, ["Raheem", "Ahmad", "Abdullah"])
+const _dept = new ITDepartment(23, ['Raheem', 'Ahmad', 'Abdullah'])
 _dept.printClassInformation()
