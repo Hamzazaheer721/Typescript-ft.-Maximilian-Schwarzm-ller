@@ -41,6 +41,7 @@ const obj4 = {
     province: 'Punjab'
   }
 }
+
 console.log(obj === obj3) // false
 console.log(compareObjects(obj, obj3)) //true
 console.log(compareObjects(obj, obj3, obj)) //true
