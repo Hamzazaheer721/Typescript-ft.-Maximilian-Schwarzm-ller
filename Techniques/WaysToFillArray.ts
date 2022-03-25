@@ -12,3 +12,6 @@ console.log(arrayThree) // [ 'h0', 'e1', 'l2', 'l3', 'o4' ]
 
 const arrayFour = Array.from([1,2,3,4], (x,i) => x + i )
 console.log(arrayFour) // [ 1, 3, 5, 7 ]
+
+const arrayFive = Array.from ({length: 8}, (_,i) => i)
+console.log(arrayFive) // [ 0, 1, 2, 3, 4, 5, 6, 7 ]
