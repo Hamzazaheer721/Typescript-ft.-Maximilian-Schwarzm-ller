@@ -11,6 +11,10 @@ Object.freeze(obj)
 obj.name = "Zaheer"
 obj.city = "Islamabad"
 
+
+console.log(Object.isFrozen(obj)) // true
+console.log(Object.isSealed(obj)) // true
+
 console.log(obj) // { name: 'Hamza', age: 25 }
 
 /* { 
@@ -37,6 +41,9 @@ let obj_2 = {
 Object.seal(obj_2)
 obj_2.name = "Hamza"
 obj_2.age = 25;
+
+console.log(Object.isSealed(obj_2)) // true
+console.log(Object.isFrozen(obj_2)) // false
 
 console.log(obj_2) // { name : "Hamza" }
 
