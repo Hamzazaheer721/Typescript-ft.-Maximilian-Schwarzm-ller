@@ -29,5 +29,13 @@ console.log(Object.getOwnPropertyDescriptors(trollToken))
 console.log(Object.isFrozen(trollToken)) // false
 console.log(Object.isSealed(trollToken)) // false
 console.log(Object.isExtensible(trollToken)) // false
+
+// We can delete properties but can't add new ones
+
+delete trollToken.name
+trollToken.name = "Hamza"
+console.log(trollToken) // { symbol: 'TRL', decimal: 6, totalSupply: 100000000 }
+
+
 // For making it sealed, make configurable and writable to false
 // of each property inside object
