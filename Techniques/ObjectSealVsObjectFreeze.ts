@@ -13,13 +13,21 @@ obj.city = "Islamabad"
 
 console.log(obj) // { name: 'Hamza', age: 25 }
 
-/* { name:
-  { 
-    value: 'Hamza',
-    writable: false,
-    enumerable: true,
-    configurable: false 
-  } 
+/* { 
+    name:
+      { 
+        value: 'Hamza',
+        writable: false,
+        enumerable: true,
+        configurable: false 
+      },
+    age:
+       { 
+        value: 25,
+        writable: false,
+        enumerable: true,
+        configurable: false 
+     }  
 } */
 
 let obj_2 = {
