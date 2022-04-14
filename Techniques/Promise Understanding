@@ -1,0 +1,34 @@
+const call = async (a ,b) => {
+    try{
+        throw new Error({code: 200, message: "error # 1"})
+    }catch(err){
+        console.log("Call ERROR # 1 ", err) // this gets executed
+    }
+}
+
+const call2 = async (a,b) => {
+    try{
+        throw new Error({code: 200, message: "error # 2"})
+    }catch(err){
+        console.log("CALL ERROR # 2", err)
+    }
+}
+const func1 = async () =>  {
+    return "FUNC 1"
+}
+
+const func2 = async () => {
+    throw new Error("Func 2 ERROR")
+}
+
+async function main(){
+    try{
+        const response = await call();
+        console.log(response) // undefined, if we had returned from that catch clause then we would have gotten error
+    }catch(err){
+        console.log("MAIN ERROR CLAUSE => ", err)
+    }
+}
+
+
+main();
