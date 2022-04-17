@@ -1,0 +1,33 @@
+const func1 = async (a = 2) => {
+    return a
+}
+
+const func2 = async () => {
+    throw new Error("ERROR2 AYA HAI BHAI")
+}
+
+const func3 = async (a = 2) => {
+    try{
+        if(a > 4) return await a;
+        else throw new Error("ERROR3 AYA HAI BHAI")
+    }catch(err){
+        return `CATCH func3 => ${err}`
+    }
+}
+
+const func4 = async (a = 2) => {
+    if(a > 4) return await a;
+    else throw new Error("ERROR4 AYA HAI BHAI")
+}
+
+const main = async () => {
+    try{
+        // const response = await Promise.all([func1(), func2()]) 
+        const response = await func4()
+        console.log("response => ",response)
+    } catch(err){
+        console.log("CATCH main => ",err)
+    }
+}
+
+main()
