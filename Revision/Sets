@@ -1,0 +1,21 @@
+const conditions = [10, 1, 2, 3, 4, 5, 3, 4]
+
+const NUMBER = 4;
+
+console.info(conditions.includes(NUMBER)) // true
+
+const conditionsSet = new Set(conditions);
+
+console.info(conditionsSet.has(NUMBER)); // true
+
+
+// Unique Array from Sets
+const uniqueArray = [...conditionsSet];
+
+console.info(uniqueArray); // [ 10, 1, 2, 3, 4, 5 ]
+
+
+// Another way to have unique Array 
+const uniqueArrayTwo = conditions.filter((val, idx, arr) => arr.indexOf(val) === idx);
+
+console.info(uniqueArrayTwo) // [ 10, 1, 2, 3, 4, 5 ]
