@@ -13,6 +13,10 @@ const person = {
     },
     getNameForApply: function (args = [""]) {
         return this.name + " " + args.join('');
+    },
+    getNameForBind: function () {
+        console.info(`My Name is ${this.name}`);
+        return this.name
     }
 }
 
@@ -53,3 +57,19 @@ console.info(Math.max.apply(null, [1, 2, 3])) // 3
 // null is not used in this example so it doesn't matter. We can similarly use Math, "", 0.
 
 console.info(Math.max.apply(true, [1, 2, 3])) // 3
+
+
+////////////////////
+// FUNCTION BIND //
+//////////////////
+
+// Function bind also works the same way as call i.e., function borrowing
+// The main difference is that it can be used to avoid loosing "this".
+
+// When the function is used as a callback then "this" is lost so we make use of bind to preserve its "this".
+
+setTimeout(person.getNameForBind, 1000); // My Name is undefined
+
+const display = person.getNameForBind.bind(person)
+setTimeout(display, 1000); // My Name is Hamza
+
