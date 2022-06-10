@@ -1,6 +1,6 @@
 Nodejs is Javascript-runtime built on Google Chorme's V8 engine.
 - Nodejs is used for non-blocking, event driven functions due to its single threaded nature.
-- requests => event queue => event loops
+- Flow => requests => event queue => event loops
   - Thread pool (blocking) 
   - I/O Pool (epool, kqueue) => (non-blocking)
 - External Resources
