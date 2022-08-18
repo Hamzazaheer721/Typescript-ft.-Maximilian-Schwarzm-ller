@@ -1,0 +1,212 @@
+ssh-keygen -t ed25519 -C "cctoadrian@gmail.com"
+
+git config --global --replace-all user.name "adrpage"
+
+
+Setting user name and password in github:
+git config --global user.name "MY_NAME"
+git config --global user.email "MY_NAME@example.com"
+
+To switch to another user:
+git config --global --unset user.name
+git config --global --unset user.email
+git config --global --unset credential.helper
+
+ssh.add ~/.ssh/xyz
+
+
+https://confluence.atlassian.com/bitbucketserver/creating-ssh-keys-776639788.html
+
+git fetch --all
+
+
+https://altabos.visualstudio.com/Clariata/_boards/board/t/Clariata%20Team
+
+To Delete All the Existing users Globally:
+git config --global --unset user.name
+git config --global --unset-all user.name
+
+
+To Delete All the Existing users:
+git config --unset user.name
+git config --unset-all user.name
+
+for saving token's cache: 
+git config --global credential.helper cache
+
+Getting all remote branches:
+Git fetch --prune
+Git branch -a
+
+listing all local branches:
+git branch -a
+
+for renaming current branch:
+git branch -m <new-name>
+
+Delete Branch remotely:
+git push origin --delete <Remote-branch-name>
+git push origin -u <Renamed-local-branch-name>
+
+update all local branches with remote branches:
+git remote update origin --prune
+
+Bypass Husky:
+git commit -m "message" --no-verify
+
+Push gitmodules
+git submodule foreach "git add . && git commit -m 'update' && git push"
+
+For windows goto credential manager:
+Replace password with your access token to bypass the error.
+
+https://stackoverflow.com/questions/68775869/support-for-password-authentication-was-removed-please-use-a-personal-access-to
+
+git credential-osxkeychain erase
+git credential-osxkeychain
+
+haseemOfficial
+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
+
+Third octet is greater than 20 and myEpik: false
+
+Make ssh:
+
+cd ~/.ssh
+ssh-keygen -o
+cat ~/.ssh/id_rsa.pub
+
+~/.ssh/id_rsa
+
+Copy your public ssh key to send to anyone:
+
+pbcopy < ~/.ssh/id_rsa.pub
+
+ssh -p11026 hamza@208.65.249.108
+sudo -s
+enter your password
+cd /storage/latest/EPIKFirmware
+git pull
+pm2 restart 1
+To check logs on server:
+pm2 logs
+
+ssh -p11026 hamza@208.65.249.107
+sudo -s
+cd /mnt/EPIKFirmware/epic-ui
+cd /mnt/EPIKFirmware/epikFax
+git pull
+Yarn build
+pm2 restart 1
+
+ssh -p11026 hamza@208.65.249.108
+mongodump
+cd dump/epikFax
+mongodump -d epikFax -c users
+
+mongorestore -d epikFax /Users/hmz/Desktop/epikFax (path to dump folder => epikFax)
+mongorestore -d epikFax -c newName/oldName /Users/hmz/Desktop/epikFax/users.bson
+
+scp -P11026 hamza@208.65.249.108:/home/hamza/backup.txt /Users/hmz/Desktop
+-r is added in scp for copying directory
+chown hamza epikFax
+/home/hamza/backupDB/dump/epikFax
+scp -P11026 hamza@208.65.249.108:directory /Users/hmz/Desktop
+
+For backing up production db 
+mongodump --host 10.172.1.106 -d epikFax --excludeCollection=boxtrails --port 27017 --gzip --out /storage/backup/
+
+Go back to your directory back and import this backup from strage/backup to local path
+gunzip -dk *.gz // -d to decompress, k to keep the original file
+
+sudo lsof -i :3001
+Kill -9 <PID>
+
+Sim 2
+8901260882288079459
+
+
+https://www.youtube.com/watch?v=u5fMslpVoW4
+
+quid: new user
+ruid: the user who will perform operation on other
+
+/Users/hmz/Desktop/EPIKFirmware/epikFax
+/Users/hmz/Desktop/epikUI
+/Users/hmz/Desktop/Models/models
+
+Goto 108
+mongo 10.172.1.108
+
+mongorestore --host localhost:27017 --gzip --archive=/Users/hmz/Desktop/backup/dbBackup.gz --db epikFax
+
+/home/hamza/backup
+
+mongodump --host 10.172.1.106 -d epikFax --excludeCollection=boxtrails --port 27017 --gzip --out /storage/backup/
+
+mongorestore -d epikFax -c obis /Users/hmz/Desktop/backup/epikFax/obis.bson
+mongorestore -d epikFax -c numbers /Users/hmz/Desktop/backup/epikFax/numbers.bson
+mongorestore -d epikFax -c epikboxes /Users/hmz/Desktop/backup/epikFax/epikboxes.bson
+
+Token = >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
+
+mongorestore -d epikFax /Users/hmz/Desktop/backup/dump/epikFax
+
+sudo systemctl stop nginx 
+sudo systemctl start nginx 
+sudo systemctl restart nginx
+
+
+6157539685f7cf46ede3c87e
+recording disabled due to timeout
+
+
+Brant test box -> 000032500004 (SIP/PRI enabled)
+Pena Test Device -> 000070000009
+usama test box -> 000004000006
+
+
+killall node (kills all node server)
+
+Valid Address fields for e911
+
+EPIK Labs
+2122 S GRAND AVE
+STE 3
+SANTA ANA
+CA
+92705
+
+
+MY- 1020 - Modem fields update on fetching sysInfo
+=> This issue is resolved. I have put up the Pull request. 
+
+MY-1090 - It was about switching Sys Info Api to consolidated API.
+=> Collobarted with Sadan and completed this task
+
+MY-1074: Gen 2 Device bugs
+-> Sadan is working with me on it. restBinary is not updated. No apis exist on box to update.
+-> You can assign me another task to work on meanwhile.
+
+
+
+==> Make card json (Produce Dates); => Done
+==> Design Card with Mock Data => In Progress
+==> Style Buttons in second section
+==> Design right section for filtering
+==> implement filtering
+
+
+[Interface]
+PrivateKey = UE9X732b4GcvlAp+lBvV66s4CxhCGzrzrzRdddfZOWo=
+Address = 10.254.254.47/24
+
+[Peer]
+PublicKey = yc6vD4Xj6xE/KxcMbCDfY45vxPqJYi0uNJ4eIuhu6V8=
+AllowedIPs = 208.65.248.0/22, 10.15.0.0/16, 10.254.0.0/24
+Endpoint = 208.65.249.60:42024
+PersistentKeepalive = 21
+
+
+
+server.sofit.ltd
