@@ -1,0 +1,3 @@
+- For Dump with gzip files
+
+  - mongorestore -d epikFax /Users/HZ/Sofit/EPIK/dump/production/August-24/epikFax
