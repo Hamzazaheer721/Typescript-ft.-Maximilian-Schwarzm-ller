@@ -1,3 +1,5 @@
 - For Dump with gzip files
+  - mongorestore --gzip --db epikFax /Users/HZ/Sofit/EPIK/dump/production/August-24/epikFax --nsInclude='epikFax.*'
 
+- For Simple Restore
   - mongorestore -d epikFax /Users/HZ/Sofit/EPIK/dump/production/August-24/epikFax
