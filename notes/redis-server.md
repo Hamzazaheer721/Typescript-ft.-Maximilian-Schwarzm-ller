@@ -1,0 +1,2 @@
+- brew install redis
+- redis-cli ping (check if redis server is running)
