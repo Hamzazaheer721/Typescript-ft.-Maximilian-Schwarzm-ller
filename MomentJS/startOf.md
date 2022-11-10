@@ -2,7 +2,10 @@
 - It will mutate the original moment to the start of the time given.
 
 
-- ///////////////// year vs quarter /////////////////////////
+- ////////////////////////////////////////////////
+- /////////////// YEAR vs QUARTER ///////////////
+- //////////////////////////////////////////////
+
 - const date = new Date(
     "Wed Aug 09 2022 12:00:00 GMT+0500 (Pakistan Standard Time"
   );
@@ -29,8 +32,9 @@
 -  const startOfQuarter = startDate.startOf("quarter").format();
 
 - ////////////////////////////////////////////////
-- ///////// /////// MONTH ///////////////// /////
+- ///////////////// MONTH ///////////////////////
 - //////////////////////////////////////////////
+
 - const startOfMonth = moment().startOf("month").format();
 -  const startOfMonthManually = moment()
     .milliseconds(0)
@@ -39,3 +43,40 @@
     .hours(0)
     .date(1)
     .format();
+    
+
+- ////////////////////////////////////////////////
+- ///////////////// WEEK vs ISO-WEEK ////////////
+- //////////////////////////////////////////////
+
+- Week starts the time from the first day of the week (Sunday).
+- ISO-Week starts the time from the first day of the week (Monday) according to ISO.
+
+
+- ////////////////////////////////////////////////
+- ///////////////// DAY vs Date /////////////////
+- //////////////////////////////////////////////
+
+- Both start the time from the from 12AM or by resetting time to 00:00:00.
+
+- const date = new Date(
+    "Tue Aug 09 2022 15:31:24 GMT+0500 (Pakistan Standard Time"
+  );
+
+-  const startOfDay = moment(date).startOf("day").format();
+-  const startOfDate = moment(date).startOf("date").format();
+
+-  const startOfDayDateManually = moment(date)
+-    .milliseconds(0)
+-    .seconds(0)
+-    .minutes(0)
+-    .hours(0)
+-    .format();
+
+-  console.info({
+    startDate: moment(date).format(),
+    startOfDay,
+    startOfDate,
+    startOfDayDateManually
+  });
+
