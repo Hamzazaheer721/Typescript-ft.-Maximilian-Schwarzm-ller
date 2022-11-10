@@ -101,3 +101,12 @@
     startOfHour,
     startOfHourManually
   });
+  
+  
+- ///////////////////////////////////////////////////////////////////
+- ///////////////// MINUTES AND SECONDS ////////////////////////
+- /////////////////////////////////////////////////////////////////
+
+- moment().startOf('minute');  // set to now, but with 0 seconds and 0 milliseconds
+- moment().startOf('second');  // same as moment().milliseconds(0);
+  
