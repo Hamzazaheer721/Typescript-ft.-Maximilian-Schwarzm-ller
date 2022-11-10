@@ -1,0 +1,6 @@
+ - Subtract
+    - Subtract is used to subtract time from date;
+    - Math.ceil is used on number if it is introduced.
+    - e.g
+    - moment().subtract(2.4, "months").daysInMonth(); 
+    - Here 2.4 is rounded off to 3 and if month is 6 currently then it will become 3 (April).
