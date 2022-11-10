@@ -80,3 +80,24 @@
     startOfDayDateManually
   });
 
+
+- ////////////////////////////////////////////////
+- ///////////////// HOUR ////////////////////////
+- //////////////////////////////////////////////
+
+- Resets the hour => minutes, seconda and milliseconds of the hour are reset 
+- e.g => 21:51:35 => 21:00:00
+
+- const startOfHour = moment(date).startOf("hour").format();
+
+-  const startOfHourManually = moment(date)
+    .milliseconds(0)
+    .seconds(0)
+    .minutes(0)
+    .format();
+
+-  console.info({
+    startDate: moment(date).format(),
+    startOfHour,
+    startOfHourManually
+  });
