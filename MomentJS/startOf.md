@@ -27,3 +27,15 @@
 -  start of quarter will take to the starting month of current quarter
 -  e.g If I am inserting August as month, then my month will be set to july (7th month)
 -  const startOfQuarter = startDate.startOf("quarter").format();
+
+- ////////////////////////////////////////////////
+- ///////// /////// MONTH ///////////////// /////
+- //////////////////////////////////////////////
+- const startOfMonth = moment().startOf("month").format();
+-  const startOfMonthManually = moment()
+    .milliseconds(0)
+    .seconds(0)
+    .minutes(0)
+    .hours(0)
+    .date(1)
+    .format();
