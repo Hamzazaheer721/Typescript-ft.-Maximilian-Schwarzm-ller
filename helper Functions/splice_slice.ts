@@ -45,6 +45,12 @@ const replaceFunc = (index, arr, val) => {
   return arr
 }
 
+const AddElementAtEnd = (arr, val) => {
+  arr.splice(arr.length, 0, val);
+  return arr;
+}
+
 console.log('ADD', addFunc(2, _arr, 33))
 console.log('REMOVE', removeFunc(33, _arr))
 console.log('REPLACE', replaceFunc(5, _arr, 66))
+console.log('REPLACE', replaceFunc(_arr, 78))
