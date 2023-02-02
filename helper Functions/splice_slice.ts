@@ -53,4 +53,4 @@ const AddElementAtEnd = (arr, val) => {
 console.log('ADD', addFunc(2, _arr, 33))
 console.log('REMOVE', removeFunc(33, _arr))
 console.log('REPLACE', replaceFunc(5, _arr, 66))
-console.log('REPLACE', replaceFunc(_arr, 78))
+console.log('ADD_ELEM_AT_END', replaceFunc(_arr, 78))
