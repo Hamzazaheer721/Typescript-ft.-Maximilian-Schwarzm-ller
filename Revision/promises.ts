@@ -14,6 +14,7 @@ const callApiWithError = () => {
     })
 }
 
+ 
 const func1 = () => {
     return callApi().then((res) => {
         return res;
@@ -21,6 +22,7 @@ const func1 = () => {
         throw error
     })
 }
+
 
 const func2 = () => {
     return new Promise ((res, rej) => {
@@ -32,13 +34,26 @@ const func2 = () => {
     })
 }
 
+
+const func3 = async () => {
+    try {
+        const response = await callApiWithError();
+        return response;
+    } catch(err) {
+        throw err;
+    }
+}
+
+
+
 const main = async () => {
     try{
-        const response1 = await func2();
+        const response1 = await func3();
         console.info({response1})
     } catch(err){
         console.info({err})
     }
 }
+
 
 main();
